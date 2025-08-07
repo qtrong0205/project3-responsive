@@ -85,19 +85,138 @@
   .navbar__link:hover {
     background-color: #00ffff37;
   }
+
+  /* khối hero */
+  .hero {
+    flex-direction: column-reverse;
+    row-gap: 50px;
+  }
+
+  .hero__content {
+    width: 80%;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  .hero__row {
+    justify-content: center;
+  }
+
+  /* khối service */
+  .service__row {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+
+  .service__list {
+    text-align: center;
+  }
+
+  .service-item {
+    width: 80%;
+    text-align: start;
+  }
+
+  /* khối work */
+  .work {
+    text-align: center;
+  }
+
+  .work__desc {
+    margin: 18px auto 0;
+  }
+
+  .work__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+  }
+
+  .work-item {
+    width: 66.66%;
+    text-align: start;
+  }
+
+  /* khối about */
+  .about-row {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .about__media {
+    width: 100%;
+  }
+
+  .about__img--big {
+    width: 100%;
+    border-radius: 15px;
+    margin: 25px auto;
+  }
+
+  .about__img--small {
+    display: none;
+  }
+
+  .about-content {
+    width: 90%;
+    text-align: center;
+  }
+
+  /* khối team */
+  .team__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+
+  .team-item__thumb {
+    margin: 0 auto;
+  }
+
+  /* khối install */
+  .install__img {
+    display: none;
+  }
+
+  .install__content {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /* khối blog */
+  .blog__inner {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .blog__list {
+    order: 1;
+  }
+
+  .blog__content {
+    order: 2;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog__heading {
+    max-width: 90%;
+  }
 }
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .footer-hidden-tablet {
+    display: none;
+  }
+
+  .footer__top {
+    grid-template-columns: repeat(2, 0.5fr) 1fr;
+  }
 }
 
 /* mobile */
 @media (max-width: 767.98px) {
-}
-
-/* tạm ẩn các phần không liên quan */
-.hero,
-main,
-.footer {
-  display: none;
 }
