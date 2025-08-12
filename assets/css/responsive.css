@@ -223,6 +223,10 @@
   .show-on-mobile {
     display: none;
   }
+
+  .dark-theme {
+    left: -30%;
+  }
 }
 
 /* mobile */
@@ -232,7 +236,7 @@
   }
 
   .menu-header__icon {
-    top: 16px;
+    top: 36px;
   }
 
   .menu-drawer {

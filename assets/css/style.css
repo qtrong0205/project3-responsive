@@ -4,6 +4,7 @@
 
 :root {
   --header-bg: #10375c;
+  --button-color: #2e80ce;
 }
 
 html {
@@ -38,7 +39,7 @@ a {
   display: inline-block;
   min-width: 205px;
   line-height: 60px;
-  background: #2e80ce;
+  background: var(--button-color);
   color: #fff;
   text-align: center;
   font-size: 1.8rem;
@@ -87,14 +88,62 @@ a {
 }
 
 .control__btn:hover {
-  background: #2e80ce;
-  border-color: #2e80ce;
+  background: var(--button-color);
+  border-color: var(--button-color);
   color: #fff;
 }
 
 .control-icon--next {
   rotate: 180deg;
 }
+/* ================ header ================ */
+.dark-theme__input {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.dark-theme {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.dark-theme:after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.5s;
+}
+
+.dark-theme__input:checked + .dark-theme {
+  background: #bada55;
+}
+
+.dark-theme__input:checked + .dark-theme:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.dark-theme:active:after {
+  width: calc(100% - 20px);
+}
+
+body:has(.dark-theme__input:checked) {
+  --header-bg: #03192e;
+  --button-color: #280e9c;
+}
+
 /* ================ header ================ */
 .header {
   padding-top: 30px;
@@ -266,7 +315,7 @@ a {
 
 .service-item:hover .service-item__icon {
   color: #fff;
-  background: #2e80ce;
+  background: var(--button-color);
 }
 
 .service-item__icon {
@@ -328,7 +377,7 @@ a {
 }
 
 .work-item:hover {
-  border-color: #2e80ce;
+  border-color: var(--button-color);
   transform: translateY(-16px);
 }
 
@@ -351,7 +400,7 @@ a {
 .work-item__more {
   margin-top: 18px;
   display: inline-block;
-  color: #2e80ce;
+  color: var(--button-color);
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.75;
@@ -475,7 +524,7 @@ a {
   padding: 0 70px;
   height: 427px;
   border-radius: 4px;
-  background: #2e80ce;
+  background: var(--button-color);
 }
 
 .install__img {
@@ -611,7 +660,7 @@ a {
 }
 
 .blog-item__more:hover {
-  color: #2e80ce;
+  color: var(--button-color);
 }
 
 /* ==================== Appointment ====================== */
@@ -630,7 +679,7 @@ a {
   display: block;
   width: 136px;
   height: 2px;
-  background: #2e80ce;
+  background: var(--button-color);
   margin: 18px auto 0;
 }
 
@@ -704,12 +753,12 @@ a {
   height: 32px;
   border-radius: 50%;
   background: #fff;
-  color: #2e80ce;
+  color: var(--button-color);
   transition: 0.25s;
 }
 
 .footer__social-btn:hover {
-  background: #2e80ce;
+  background: var(--button-color);
   color: #fff;
 }
 
@@ -739,7 +788,7 @@ a {
   width: 108px;
   height: 46px;
   border-radius: 4px;
-  background: #2e80ce;
+  background: var(--button-color);
   color: #fff;
   font-size: 1.4rem;
   font-weight: 600;
